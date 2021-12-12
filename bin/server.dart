@@ -17,7 +17,7 @@ final Router _router = Router()
   ..get('/echo/<message>', _echoHandler);
 
 Future<Response> _rootHandler(Request req) async {
-  // JUST TRYING TO WAIT CLIENT
+  // JUST TRYING TO WAIT CLIENT ( it does wait for 2 seconds )
   // await Future.delayed(Duration(seconds: 2));
   String result =
       await File('${Directory.current.path}/bin/index.html').readAsString();
